@@ -1,0 +1,284 @@
+* {
+    width: fit-content;
+    height: fit-content;
+    box-sizing: initial;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    height: 100vh;
+    background-image: url(tech.png);
+    font-size: 16px;
+    font-weight: bolder;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/**********************************************
+*** TOP PART
+**********************************************/
+
+.top {
+    height: 40vh;
+    background-image: url(tech.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.budget {
+    position: absolute;
+    width: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+.budget__title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.budget__value {
+    font-weight: 300;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+    color: rgb(252, 56, 56);
+}
+
+.budget__income,
+.budget__expenses {
+    padding: 12px;
+    text-transform: uppercase;
+    color: rgb(210, 245, 9);
+    font-size: 18px;
+}
+
+.budget__income {
+    margin-bottom: 10px;
+    position: relative;
+    display: block;
+    outline: none;
+    width: 250px;
+    height: 30pX;
+    color: rgb(240, 14, 14);
+    -webkit-box-shadow: 0.5;
+    box-shadow: 0 2px 10px 1px rgba(31, 30, 30, 0.5);
+}
+
+.budget__expenses {
+    position: relative;
+    display: block;
+    outline: none;
+    width: 250px;
+    height: 30pX;
+    color: rgb(240, 14, 14);
+    -webkit-box-shadow: 0.5;
+    box-shadow: 0 2px 10px 1px rgba(31, 30, 30, 0.5);
+}
+
+.budget__income--text,
+.budget__expenses--text {
+    float: left;
+    font-weight: bolder;
+    font-size: 17px;
+    color: black;
+    margin-top: 5px;
+}
+
+.budget__income--value,
+.budget__expenses--value {
+    letter-spacing: 2px;
+    float: right;
+    font-weight: bolder;
+    font-size: 20px;
+    color: rgb(255, 6, 6);
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px;
+    margin-left: 10px;
+}
+
+
+/**********************************************
+*** BOTTOM PART
+**********************************************/
+
+
+/***** FORM *****/
+
+.add {
+    padding: 15px;
+}
+
+.add__type,
+.add__description,
+.add__value {
+    background-color: rgb(255, 244, 236);
+    font-style: italic;
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.add__description {
+    width: 400px;
+}
+
+.add__value {
+    width: 100px;
+}
+
+.add__btn {
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: italic;
+    background-color: rgb(207, 243, 170);
+    border-radius: 5px;
+    color: rgb(241, 7, 7);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+    padding: 10px 15px;
+}
+
+.add__btn:active {
+    transform: translateY(2px);
+}
+
+.add__type:focus,
+.add__description:focus,
+.add__value:focus {
+    outline: none;
+    border: 1px solid #28B9B5;
+}
+
+.add__btn:focus {
+    outline: none;
+}
+
+
+/***** LISTS *****/
+
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.income {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+    color: rgb(243, 60, 60);
+    font-style: initial;
+    font-weight: bold;
+}
+
+.expenses {
+    float: left;
+    width: 475px;
+    margin-right: 50px;
+    color: rgb(250, 61, 61);
+    font-weight: bold;
+    font-style: initial;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-style: initial;
+    font-weight: bold;
+}
+
+.icome__title {
+    color: orange;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: initial;
+}
+
+.expenses__title {
+    color: orange;
+    font-size: 25px;
+    font-weight: bolder;
+    font-style: initial;
+}
+
+.item {
+    padding: 13px;
+    border-bottom: none;
+}
+
+.submit_record {
+    padding: 16px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    left: 600px;
+    top: 20px;
+}
+
+.item__description {
+    float: left;
+}
+
+.item__value {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.income .item__value {
+    color: rgb(40, 247, 119);
+    float: right;
+}
+
+.income .item__delete--btn {
+    float: right;
+    color: white;
+    background-color: transparent;
+}
+
+.expenses .item__value {
+    float: right;
+    color: rgb(17, 252, 76);
+}
+
+.expenses .item__percentage,
+.expenses .item__delete--btn {
+    float: right;
+    color: white;
+    background-color: transparent;
+}
